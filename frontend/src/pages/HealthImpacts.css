@@ -1,0 +1,423 @@
+.health-page {
+  padding-top: 80px;
+}
+
+.health-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(10, 14, 39, 0.95) 0%, rgba(13, 27, 42, 0.8) 100%);
+}
+
+.anatomy-section {
+  text-align: center;
+}
+
+.anatomy-container {
+  max-width: 800px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.body-outline {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(77, 212, 172, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  filter: grayscale(100%) brightness(0.5);
+}
+
+.organ-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.organ-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.marker-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(77, 212, 172, 0.2);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.marker-icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #16a085 0%, #1e8e7a 100%);
+  border: 2px solid #4dd4ac;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(77, 212, 172, 0.4);
+}
+
+.organ-marker:hover .marker-icon,
+.organ-marker.active .marker-icon {
+  transform: scale(1.2);
+  box-shadow: 0 6px 30px rgba(77, 212, 172, 0.6);
+}
+
+.organ-tooltip {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background: rgba(10, 14, 39, 0.98);
+  backdrop-filter: blur(10px);
+  border: 2px solid #4dd4ac;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(77, 212, 172, 0.3);
+  animation: fadeInUp 0.3s ease;
+  z-index: 100;
+}
+
+.tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(77, 212, 172, 0.2);
+}
+
+.tooltip-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e8f1f5;
+  margin: 0;
+}
+
+.risk-badge {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.risk-badge.critical {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.4);
+}
+
+.risk-badge.high {
+  background: rgba(230, 126, 34, 0.2);
+  color: #e67e22;
+  border: 1px solid rgba(230, 126, 34, 0.4);
+}
+
+.risk-badge.moderate {
+  background: rgba(241, 196, 15, 0.2);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.4);
+}
+
+.effects-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.effects-list li {
+  font-size: 13px;
+  color: #94a9c9;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.effects-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4dd4ac;
+  font-size: 16px;
+}
+
+.brain-section,
+.cardio-section {
+  background: rgba(13, 27, 42, 0.5);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.detail-grid.reverse {
+  direction: rtl;
+}
+
+.detail-grid.reverse > * {
+  direction: ltr;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(77, 212, 172, 0.2) 0%, rgba(45, 156, 219, 0.2) 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4dd4ac;
+}
+
+.detail-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e8f1f5;
+}
+
+.detail-content p {
+  font-size: 16px;
+  color: #94a9c9;
+  line-height: 1.8;
+}
+
+.detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(77, 212, 172, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4dd4ac 0%, #2d9cdb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #5a7089;
+  line-height: 1.4;
+}
+
+.research-note {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(22, 160, 133, 0.1);
+  border-left: 3px solid #4dd4ac;
+  border-radius: 8px;
+}
+
+.research-note svg {
+  flex-shrink: 0;
+  color: #4dd4ac;
+  margin-top: 2px;
+}
+
+.research-note p {
+  font-size: 14px;
+  color: #94a9c9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.other-effects-section {
+  background: rgba(10, 14, 39, 0.6);
+}
+
+.effects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.effect-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(77, 212, 172, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.effect-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(77, 212, 172, 0.3);
+}
+
+.effect-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #e8f1f5;
+  margin-bottom: 16px;
+}
+
+.effect-card p {
+  font-size: 15px;
+  color: #94a9c9;
+  line-height: 1.7;
+}
+
+.ethical-note-section {
+  padding: 80px 0;
+}
+
+.ethical-card {
+  background: linear-gradient(135deg, rgba(230, 126, 34, 0.1) 0%, rgba(231, 76, 60, 0.1) 100%);
+  border: 2px solid rgba(230, 126, 34, 0.3);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+
+.ethical-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e8f1f5;
+  margin-bottom: 24px;
+}
+
+.ethical-card p {
+  font-size: 18px;
+  color: #94a9c9;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+
+.ethical-question {
+  background: rgba(10, 14, 39, 0.6);
+  border-left: 4px solid #e67e22;
+  border-radius: 8px;
+  padding: 24px 32px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #94a9c9;
+  line-height: 1.7;
+}
+
+.ethical-question strong {
+  color: #e67e22;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+@media (max-width: 968px) {
+  .detail-grid,
+  .detail-grid.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .effects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .body-outline {
+    height: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .body-outline {
+    height: 400px;
+  }
+
+  .organ-tooltip {
+    width: 250px;
+  }
+
+  .detail-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .ethical-card {
+    padding: 32px 24px;
+  }
+
+  .ethical-question {
+    padding: 20px;
+  }
+}

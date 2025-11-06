@@ -1,0 +1,347 @@
+.environment-page {
+  padding-top: 80px;
+}
+
+.environment-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(10, 14, 39, 0.95) 0%, rgba(13, 27, 42, 0.8) 100%);
+}
+
+.gallery-section {
+  text-align: center;
+}
+
+.carousel-container {
+  max-width: 1000px;
+  margin: 60px auto 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.carousel-nav {
+  width: 64px;
+  height: 64px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(77, 212, 172, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4dd4ac;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.carousel-nav:hover {
+  background: rgba(15, 23, 42, 1);
+  border-color: rgba(77, 212, 172, 0.4);
+  transform: scale(1.05);
+}
+
+.carousel-main {
+  flex: 1;
+  position: relative;
+}
+
+.carousel-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(10, 14, 39, 0.95) 0%, transparent 100%);
+  font-size: 18px;
+  font-weight: 500;
+  color: #e8f1f5;
+  text-align: center;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(77, 212, 172, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 0;
+}
+
+.indicator.active {
+  background: #4dd4ac;
+  transform: scale(1.4);
+}
+
+.bioaccumulation-section {
+  background: rgba(13, 27, 42, 0.5);
+}
+
+.food-chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.chain-step {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(77, 212, 172, 0.1);
+  border-radius: 16px;
+  padding: 32px 24px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.chain-step:hover {
+  transform: translateY(-8px);
+  border-color: rgba(77, 212, 172, 0.3);
+}
+
+.chain-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.chain-step h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e8f1f5;
+  margin-bottom: 12px;
+}
+
+.chain-step p {
+  font-size: 14px;
+  color: #94a9c9;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.concentration {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(22, 160, 133, 0.2) 0%, rgba(30, 142, 122, 0.2) 100%);
+  border: 1px solid rgba(77, 212, 172, 0.3);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4dd4ac;
+}
+
+.concentration.critical {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.2) 0%, rgba(192, 57, 43, 0.2) 100%);
+  border-color: rgba(231, 76, 60, 0.4);
+  color: #e74c3c;
+}
+
+.chain-arrow {
+  font-size: 32px;
+  color: #4dd4ac;
+  font-weight: bold;
+}
+
+.impact-areas-section {
+  background: rgba(10, 14, 39, 0.6);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.impact-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(77, 212, 172, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(77, 212, 172, 0.15);
+}
+
+.impact-icon {
+  color: #4dd4ac;
+  margin-bottom: 8px;
+}
+
+.impact-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e8f1f5;
+}
+
+.impact-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.impact-card li {
+  font-size: 14px;
+  color: #94a9c9;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.impact-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4dd4ac;
+  font-size: 18px;
+}
+
+.impact-stat {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.15) 0%, rgba(192, 57, 43, 0.15) 100%);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e74c3c;
+  text-align: center;
+}
+
+.projections-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, rgba(13, 27, 42, 0.5) 0%, rgba(10, 14, 39, 0.8) 100%);
+}
+
+.projection-card {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(77, 212, 172, 0.2);
+  border-radius: 24px;
+  padding: 60px;
+  text-align: center;
+}
+
+.projection-card h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #e8f1f5;
+  margin-bottom: 48px;
+}
+
+.projection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.projection-item {
+  background: rgba(10, 14, 39, 0.6);
+  border: 1px solid rgba(77, 212, 172, 0.1);
+  border-radius: 16px;
+  padding: 32px 24px;
+}
+
+.projection-number {
+  font-size: 56px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.projection-label {
+  font-size: 14px;
+  color: #94a9c9;
+  line-height: 1.6;
+}
+
+.projection-note {
+  font-size: 18px;
+  color: #94a9c9;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+@media (max-width: 968px) {
+  .food-chain {
+    flex-direction: column;
+  }
+
+  .chain-arrow {
+    transform: rotate(90deg);
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carousel-nav {
+    width: 56px;
+    height: 56px;
+  }
+
+  .carousel-image {
+    height: 300px;
+  }
+
+  .chain-step {
+    width: 100%;
+  }
+
+  .projection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projection-card {
+    padding: 40px 24px;
+  }
+
+  .projection-card h2 {
+    font-size: 32px;
+  }
+}
