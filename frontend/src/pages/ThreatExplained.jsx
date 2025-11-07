@@ -49,7 +49,7 @@ const ThreatExplained = () => {
               </div>
               <h3>Primary Microplastics</h3>
               <p>
-                Manufactured to be small (< 5mm). Found in cosmetics, toothpaste, industrial abrasives, 
+                Manufactured to be small (&lt; 5mm). Found in cosmetics, toothpaste, industrial abrasives, 
                 and pre-production plastic pellets called "nurdles."
               </p>
               <ul>
